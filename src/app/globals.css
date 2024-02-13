@@ -2,32 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body{
+  background-color:	#d5c1f4;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.fixing{
+  margin-top: 550px;
+  width: 80%;
+}
+
+.displayBox{
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  margin: 15px;
+  height:45vh;
+
+  box-shadow: 5px 5px 10px rgb(131, 131, 131);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.displayBox i{
+  font-size: 1.6rem;
+  padding: 0px 20px;
+}
+.displayBox b{
+  font-size: 1.3rem;
+}
+
+nav{
+  background-color: #fff;
+  width: 100%;
+  height: 13vh;
+  top: 20px;
+  left: 0;
+  position: fixed;
+  box-shadow: 5px 5px 10px rgb(131, 131, 131);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  background-color: #d5c1f4;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+button:hover{
+  background-color: #bba1e2;
+}
+
+.flexEditor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;
+}
+
+.box{
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+
+  box-shadow: 5px 5px 10px rgb(131, 131, 131);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.formStyle{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.formStyle h1{
+  color: #d5c1f4;
+  font-size: 1.5rem;
+}
+
+.formStyle input{
+  border:solid 5px #d5c1f4;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .box{
+     margin-top: 100px;
   }
 }
