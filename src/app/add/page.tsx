@@ -1,4 +1,5 @@
 import { getData, saveData, updateData, deleteData } from "@/utils/handledb";
+import Navbar from "../Navbar";
 
 export default async function Home() {
 
@@ -32,35 +33,16 @@ export default async function Home() {
   return (
       <div className="flexEditor">
 
-    <nav>
-      <button>
-        <a href="/allquotes">
-        <b>All Quotes</b>
-        </a>
-      </button>
-      <button>
-      <a href="/">
-        <b>Random Quote</b>
-        </a>
-      </button>
-    </nav>
+    <Navbar></Navbar>
 
-    <div className="box">
        <form className="formStyle" action={create}>
-        <h1><b>Add Quote</b></h1>
-        <input type="text" name="author" placeholder="Author"/>
-        <input type="text" name="quote" placeholder="Quote"/>
-        <button><b>Save Quote</b></button>
+          <div className="box">
+            <h1><b>Add Quote</b></h1>
+            <input type="text" name="author" placeholder="Author"/>
+            <input type="text" name="quote" placeholder="Quote"/>
+            <button><b>Add Quote</b></button>
+          </div>
       </form>
-
-      <form className="formStyle" action={update}>
-        <h1><b>Update Quote</b></h1>
-        <input type="text" name="id" placeholder="Id to update" />
-        <input type="text" name="author" placeholder="Author"/>
-        <input type="text" name="quote" placeholder="Quote"/>
-        <button><b>Update Quote</b></button>
-      </form>
-    </div>
 
     </div>
   );
